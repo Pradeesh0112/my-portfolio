@@ -1,30 +1,31 @@
 import { ExternalLink, Github } from "lucide-react";
-
 const projects = [
   {
-    title: "Halcyon Theme",
+    title: "HRMS Modules Suite",
     description:
-      "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    tags: ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-    image: "/images/halcyon.png", // replace with your image path
+      `Developed comprehensive HR management modules with geolocation tracking and QR/barcode generation.
+      Implemented solutions that reduced package weight and improved application performance
+- Technologies: Next.js, Webpack, Git`,
+    tags: ["Next jS", "Nest jS", "TailwindCSs", "Git", ""],
+    image: "/assets/generated-image.png", // replace with your image path
     links: {
       github: "https://github.com/bchiang7/halcyon-site",
       external: "https://halcyon-theme.netlify.app/",
     },
-    featured: true,
+    featured: false,
   },
-  {
-    title: "Spotify Profile",
-    description:
-      "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio features.",
-    tags: ["React", "Spotify API", "Styled Components", "Netlify"],
-    image: "/images/spotify.png",
-    links: {
-      github: "https://github.com/bchiang7/spotify-profile",
-      external: "https://spotify-profile.netlify.app/",
-    },
-    featured: true,
-  },
+  // {
+  //   title: "Spotify Profile",
+  //   description:
+  //     "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio features.",
+  //   tags: ["React", "Spotify API", "Styled Components", "Netlify"],
+  //   image: "/images/spotify.png",
+  //   links: {
+  //     github: "https://github.com/bchiang7/spotify-profile",
+  //     external: "https://spotify-profile.netlify.app/",
+  //   },
+  //   featured: true,
+  // },
 ];
 
 export const FeaturedProjects = () => {
@@ -39,14 +40,13 @@ export const FeaturedProjects = () => {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className={`relative flex flex-col md:flex-row items-center gap-6 border-[1px] ${
-              idx % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
+            className={`relative flex flex-col md:flex-row items-center gap-6  ${idx % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
           >
             {/* Image */}
             <div className="md:w-3/5 w-full border-[1px] shadow-lg rounded-lg overflow-hidden relative group">
               <img
-                src={project.image}
+                src={"/assets/generated-image.png"}
                 alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

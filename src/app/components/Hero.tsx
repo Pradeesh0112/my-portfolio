@@ -12,10 +12,8 @@ export const Hero = () => {
       </h2>
 
       <p className="max-w-lg text-lightSlate mt-6 leading-relaxed text-lg ">
-        I’m a software engineer specializing in building (and occasionally designing) 
-        exceptional digital experiences. Currently, I’m focused on building 
-        accessible, human-centered products at 
-        <a href="https://www.upstatement.com" className="text-green"> Upstatement</a>.
+        Frontend Developer specializing in complex logic operations and performance optimization. Currently focused on building accessible, human-centered products at Ardens Business Solutions. 
+        <a href="https://abshrms.in" className="text-green"> Abshrms</a>.
       </p>
 
       <a
