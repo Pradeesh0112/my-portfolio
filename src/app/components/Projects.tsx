@@ -1,4 +1,8 @@
+
+/* eslint-disable react/no-unescaped-entities */
 import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
+
 const projects = [
   {
     title: "HRMS Modules Suite",
@@ -9,26 +13,14 @@ const projects = [
     tags: ["Next jS", "Nest jS", "TailwindCSs", "Git", ""],
     image: "/assets/generated-image.png", // replace with your image path
     links: {
-      github: "https://github.com/bchiang7/halcyon-site",
-      external: "https://halcyon-theme.netlify.app/",
+      github: "",
+      external: "https://abshrms.in/",
     },
     featured: false,
   },
-  // {
-  //   title: "Spotify Profile",
-  //   description:
-  //     "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio features.",
-  //   tags: ["React", "Spotify API", "Styled Components", "Netlify"],
-  //   image: "/images/spotify.png",
-  //   links: {
-  //     github: "https://github.com/bchiang7/spotify-profile",
-  //     external: "https://spotify-profile.netlify.app/",
-  //   },
-  //   featured: true,
-  // },
 ];
 
-export const FeaturedProjects = () => {
+export const Projects = () => {
   return (
     <section id="projects" className="max-w-6xl mx-auto py-20 px-6">
       <h2 className="text-2xl font-bold text-lightest-slate mb-10">
@@ -45,11 +37,7 @@ export const FeaturedProjects = () => {
           >
             {/* Image */}
             <div className="md:w-3/5 w-full border-[1px] shadow-lg rounded-lg overflow-hidden relative group">
-              <img
-                src={"/assets/generated-image.png"}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            <Image src="/assets/generated-image.png" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="me"  width={400} height={400} />
             </div>
 
             {/* Text */}

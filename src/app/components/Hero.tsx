@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export const Hero = () => {
   return (
     <section className="h-screen flex flex-col justify-center items-start px-12 bg-navy">

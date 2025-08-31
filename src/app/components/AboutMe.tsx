@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 export const AboutMe = () => {
     return (
         <section
@@ -18,7 +20,7 @@ export const AboutMe = () => {
                         Hello! My name is <span className="text-lightestSlate">Pradeesh</span> and I enjoy creating things that live on the internet. My interest in web development started back when I decided to try editing custom themes — which taught me a lot about HTML & CSS!
                     </p>
                     <p>
-                        Today, I’m a  <span className="text-green">Front-End Developer</span>{" "}
+                        Today, I&apos;m a  <span className="text-green">Front-End Developer</span>{" "}
                          with <span className="text-green">2.5+ years of experience</span>{" "} focused on building {" "}
                          <span className="text-green">accessible</span>,{" "} and <span className="text-green">inclusive</span>,{" "} digital experiences.
                         {/*  */}
@@ -26,7 +28,7 @@ export const AboutMe = () => {
 
                     </p>
                     <p>
-                        Here are a few technologies I've been working with recently:
+                        Here are a few technologies I&apos;ve been working with recently:
                     </p>
                 </div>
 
@@ -45,16 +47,12 @@ export const AboutMe = () => {
 
             {/* Right Side Image */}
             <div className="relative max-w-xs mx-auto">
-                <div className="relative group h-[280px] w-[300px] ">
+                <div className="relative group h-[280px] w-[300px] overflow-hidden ">
                     {/* Image */}
-                    <img
-                        src="/assets/me.png"
-                        alt="Profile"
-                        className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90
+                    <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90
                  transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)]
                  group-hover:-translate-y-3 group-hover:-translate-x-3
-                 group-hover:grayscale-0  h-[280px] w-[300px] object-cover "
-                    />
+                 group-hover:grayscale-0  h-[280px] w-[300px] object-cover " width={400} height={400} />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-green/20 rounded-md mix-blend-multiply 
