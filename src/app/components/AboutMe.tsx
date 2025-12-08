@@ -47,20 +47,20 @@ export const AboutMe = () => {
 
             {/* Right Side Image */}
             <div className="relative max-w-xs mx-auto">
-                <div className="relative group h-[280px] w-[300px] overflow-hidden ">
+                <div className="relative group h-[280px] w-[300px] ">
                     {/* Image */}
                     <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90
                  transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)]
                  group-hover:-translate-y-3 group-hover:-translate-x-3
-                 group-hover:grayscale-0  h-[280px] w-[300px] object-cover " width={400} height={400} />
+                 group-hover:grayscale-0 h-[100%] cursor-pointer w-[100%] object-cover " width={400} height={400} />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-green/20 rounded-md mix-blend-multiply 
                     group-hover:bg-transparent transition duration-500 z-10"></div>
 
                     {/* Border effect */}
-                    <div className="absolute -inset-2 border-2 border-green rounded-md
-                    translate-x-2 translate-y-2 
+                    <div className="absolute group-hover:-inset-2 group-hover:border-2 border-green rounded-md
+                    translate-x-0 translate-y-0
                     group-hover:translate-x-4 group-hover:translate-y-4
                     transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)]
                     z-0"></div>
