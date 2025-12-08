@@ -2,7 +2,7 @@
 export const Hero = () => {
   return (
     <section className="h-screen flex flex-col justify-center items-start px-12 bg-navy">
-      <p className="text-green font-mono mb-4">Hi, my name is</p>
+      <p className="text-green font-mono mb-4">Hi, I am</p>
 
       <h1 className="text-4xl sm:text-6xl font-bold text-lightestSlate big-heading">
         Pradeesh
@@ -14,7 +14,7 @@ export const Hero = () => {
 
       <p className="max-w-lg text-lightSlate mt-6 leading-relaxed text-lg ">
         Frontend Developer specializing in complex logic operations and performance optimization. Currently focused on building accessible, human-centered products at Ardens Business Solutions. 
-        <a href="https://abshrms.in" className="text-green"> Abshrms</a>.
+        <a href="https://abshrms.in" target="_blank" className="text-green"> Abshrms</a>.
       </p>
 
       <a

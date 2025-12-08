@@ -38,9 +38,10 @@ export default function Contact() {
         viewport={{ once: true }}
         className="max-w-xl mx-auto text-slate-400 mb-12 leading-relaxed"
       >
-        Although I’m not currently looking for any new opportunities, my inbox
-        is always open. Whether you have a question or just want to say hi, I’ll
-        try my best to get back to you!
+       I’m currently looking for new opportunities,
+        and my inbox is always open. Whether you have a
+        question or just want to say hi, I’ll do my best
+         to get back to you!
       </motion.p>
 
       {/* Button */}

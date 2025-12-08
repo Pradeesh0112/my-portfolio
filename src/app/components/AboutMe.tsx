@@ -17,7 +17,7 @@ export const AboutMe = () => {
 
                 <div className="space-y-4 text-lightSlate font-sans text-xl leading-[1.3]">
                     <p>
-                        Hello! My name is <span className="text-lightestSlate">Pradeesh</span> and I enjoy creating things that live on the internet. My interest in web development started back when I decided to try editing custom themes — which taught me a lot about HTML & CSS!
+                        Hi! I am <span className="text-lightestSlate">Pradeesh</span> and I enjoy creating things that live on the internet. My interest in web development started back when I decided to try editing custom themes — which taught me a lot about HTML & CSS!
                     </p>
                     <p>
                         Today, I&apos;m a  <span className="text-green">Front-End Developer</span>{" "}
