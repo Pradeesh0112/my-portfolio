@@ -59,13 +59,13 @@ export const Projects = () => {
               </ul>
               {/* Links */}
               <div className="flex gap-4 justify-start md:justify-end">
-                <a
+                {/* <a
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Github className="w-5 h-5 text-slate hover:text-green transition" />
-                </a>
+                </a> */}
                 <a
                   href={project.links.external}
                   target="_blank"
