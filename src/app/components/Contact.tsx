@@ -36,7 +36,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-xl mx-auto text-slate-400 mb-12 leading-relaxed"
+        className="max-w-xl mx-auto text-slate-400 mb-12 leading-relaxed max-[600px]:mx-[30px]"
       >
        I’m currently looking for new opportunities,
         and my inbox is always open. Whether you have a

@@ -47,7 +47,7 @@ export const AboutMe = () => {
 
             {/* Right Side Image */}
             <div className="relative max-w-xs mx-auto">
-                <div className="relative group h-[280px] w-[300px] ">
+                <div className="relative group h-[280px] w-[300px] max-[600px]:h-[240px] max-[600px]:w-[260px]  ">
                     {/* Image */}
                     <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90
                  transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)]
