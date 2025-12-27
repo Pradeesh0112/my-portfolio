@@ -21,7 +21,7 @@ export const AboutMe = () => {
                     </p>
                     <p>
                         Today, I&apos;m a  <span className="text-green">Front-End Developer</span>{" "}
-                         with <span className="text-green">2.5+ years of experience</span>{" "} focused on building {" "}
+                         with <span className="text-green">2.10+ years of experience</span>{" "} focused on building {" "}
                          <span className="text-green">accessible</span>,{" "} and <span className="text-green">inclusive</span>,{" "} digital experiences.
                         {/*  */}
                         I specialize in <span className="text-green">React.js</span>,{" "} and <span className="text-green">Next.js</span>,{" "} development, delivering <span className="text-green">efficient</span>,{" "}<span className="text-green">scalable</span>,{" "} and user-friendly web solutions.
@@ -34,14 +34,15 @@ export const AboutMe = () => {
 
                 {/* Tech List */}
                 <ul className="grid grid-cols-3 gap-2 mt-6 text-sm font-mono text-slate">
-                    <li className="before:content-['▹'] before:text-green before:mr-2">JavaScript (ES6+)</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">TypeScript</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">React</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">Node.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">Vue.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">Git</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">Next.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2">TailwindCSS</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px] "> <img src="https://skillicons.dev/icons?i=js" width={18} height={18} alt="Js" className="mr-2" /> JS (ES6+)</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=ts" width={18} height={18} alt="Js" className="mr-2" /> TypeScript</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=react" width={18} height={18} alt="Js" className="mr-2" /> React</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=nodejs" width={18} height={18} alt="Js" className="mr-2" /> Node.js</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=vue" width={18} height={18} alt="Js" className="mr-2" /> Vue.js</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=git" width={18} height={18} alt="Js" className="mr-2" /> Git</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=nextjs" width={18} height={18} alt="Js" className="mr-2" /> Next.js</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=tailwind" width={18} height={18} alt="Js" className="mr-2" /> TailwindCSS</li>
+                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=firebase" width={18} height={18} alt="Js" className="mr-2" /> firebase</li>
                 </ul>
             </div>
 

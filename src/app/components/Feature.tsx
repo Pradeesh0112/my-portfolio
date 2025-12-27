@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import TextIcons from "./commonUi/TextIcons";
+import { span } from "framer-motion/client";
 
 const FeaturedProjects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,17 +18,23 @@ const FeaturedProjects = () => {
       title: "Global carbons",
       description:
         "Engineered a Next.js site for a carbon manufacturer to boost global SEO and lead generation.",
-      technologies: ["Next js", "TailwindCSS"],
+      technologies: [{title:"Next.js" ,url:"https://skillicons.dev/icons?i=nextjs"}, {title:"TailwindCSS",url:"https://skillicons.dev/icons?i=tailwind"}],
       featured: true,
-      url:"https://globalcarbons.com"
+      url: "https://globalcarbons.com"
     },
-      {
-    "title": "Licensed NLP Practitioner Course",
-    "description": "Unlock your true potential with our Licensed NLP Practitioner Course. Transform your personal and professional life through advanced Neuro-Linguistic Programming techniques.",
-    "technologies": ["Next.js", "TailwindCSS"],
-    "url": "https://nlp-register.panaceavalley.com/",
-    "featured": true
-  }
+    {
+      "title": "Licensed NLP Practitioner Course",
+      "description": "Unlock your true potential with our Licensed NLP Practitioner Course. Transform your personal and professional life through advanced Neuro-Linguistic Programming techniques.",
+      "technologies": [
+        {title:"HTML",url:"https://skillicons.dev/icons?i=html"},
+        {title:"CSS",url:"https://skillicons.dev/icons?i=css"},
+        {title:"TailwindCSS",url:"https://skillicons.dev/icons?i=tailwind"},
+        {title:"JS",url:"https://skillicons.dev/icons?i=js"},
+        {title:"PHP",url:"https://skillicons.dev/icons?i=php"},
+      ],
+      "url": "https://nlp-register.panaceavalley.com/",
+      "featured": true
+    }
   ];
 
   return (
@@ -79,9 +87,9 @@ const FeaturedProjects = () => {
                   />
                 </svg>
                 {/* External Link */}
-           
-           <a href={project?.url} target="_blank" >
-                <ExternalLink className="w-5 h-5 text-slate hover:text-green transition" />
+
+                <a href={project?.url} target="_blank" >
+                  <ExternalLink className="w-5 h-5 text-slate hover:text-green transition" />
                 </a>
               </div>
 
@@ -95,8 +103,10 @@ const FeaturedProjects = () => {
 
               {/* Tech stack */}
               <div className="flex flex-wrap gap-2 text-xs text-slate-400 font-mono">
-                {project && (project?.technologies||[]).map((tech, i) => (
-                  <span key={i}>{tech}</span>
+                {project && (project?.technologies || []).map((tech:any, i) => (
+                  <span key={i} >
+                    <TextIcons url={tech?.url} title={tech?.title} />
+                  </span>
                 ))}
               </div>
             </motion.div>

@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import TextIcons from "./commonUi/TextIcons";
 
 const projects = [
   {
@@ -10,7 +11,14 @@ const projects = [
       `Developed comprehensive HR management modules with geolocation tracking and QR/barcode generation.
       Implemented solutions that reduced package weight and improved application performance
 - Technologies: Next.js, Webpack, Git`,
-    tags: ["Next jS", "Nest jS", "TailwindCSs", "Git", ""],
+    tags: [
+              {title:"Nest.js",url:"https://skillicons.dev/icons?i=nestjs"},
+              {title:"Firebase",url:"https://skillicons.dev/icons?i=firebase"},
+          {title:"Next.js",url:"https://skillicons.dev/icons?i=nextjs"},
+        {title:"CSS",url:"https://skillicons.dev/icons?i=css"},
+        {title:"TailwindCSS",url:"https://skillicons.dev/icons?i=tailwind"},
+        {title:"JS",url:"https://skillicons.dev/icons?i=js"},
+    ],
     image: "/assets/generated-image.png", // replace with your image path
     links: {
       github: "",
@@ -53,8 +61,10 @@ export const Projects = () => {
               </div>
               {/* Tags */}
               <ul className="flex flex-wrap gap-3 text-slate text-xs font-mono mb-4">
-                {project.tags.map((tag, i) => (
-                  <li key={i}>{tag}</li>
+                {project.tags.map((tag:any, i) => (
+                  <li key={i}>
+                    <TextIcons url={tag?.url} title={tag?.title} />
+                  </li>
                 ))}
               </ul>
               {/* Links */}
