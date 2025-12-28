@@ -1,37 +1,37 @@
-import type { Metadata } from "next";
-import { calibre } from './fonts'; // Import your custom Calibre font
+import type { Metadata, Viewport } from "next";
+import { calibre } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name | Portfolio",
-    template: "%s | Your Name"
+    default: "Pradeesh | Portfolio",
+    template: "%s | Pradeesh",
   },
-  description: "Software engineer specializing in building exceptional digital experiences.",
+  description:
+    "Software engineer specializing in building exceptional digital experiences.",
   keywords: ["portfolio", "developer", "software engineer", "web development"],
-  authors: [{ name: "Your Name" }],
-  themeColor: "#0a192f",
+  authors: [{ name: "Pradeesh" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourdomain.com",
-    title: "Your Name | Portfolio",
-    description: "Software engineer specializing in building exceptional digital experiences.",
-    siteName: "Your Name Portfolio",
+    title: "Pradeesh | Portfolio",
+    description:
+      "Software engineer specializing in building exceptional digital experiences.",
+    siteName: "Pradeesh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name | Portfolio",
-    description: "Software engineer specializing in building exceptional digital experiences.",
-    creator: "@yourtwitter",
+    title: "Pradeesh | Portfolio",
+    description:
+      "Software engineer specializing in building exceptional digital experiences.",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#0a192f",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${calibre.variable} font-sans antialiased bg-navy text-lightSlate`}>
