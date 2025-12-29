@@ -21,8 +21,8 @@ export const AboutMe = () => {
                     </p>
                     <p>
                         Today, I&apos;m a  <span className="text-green">Front-End Developer</span>{" "}
-                         with <span className="text-green">2.10+ years of experience</span>{" "} focused on building {" "}
-                         <span className="text-green">accessible</span>,{" "} and <span className="text-green">inclusive</span>,{" "} digital experiences.
+                        with <span className="text-green">2.10+ years of experience</span>{" "} focused on building {" "}
+                        <span className="text-green">accessible</span>,{" "} and <span className="text-green">inclusive</span>,{" "} digital experiences.
                         {/*  */}
                         I specialize in <span className="text-green">React.js</span>,{" "} and <span className="text-green">Next.js</span>,{" "} development, delivering <span className="text-green">efficient</span>,{" "}<span className="text-green">scalable</span>,{" "} and user-friendly web solutions.
 
@@ -33,21 +33,42 @@ export const AboutMe = () => {
                 </div>
 
                 {/* Tech List */}
-                <ul className="grid grid-cols-3 gap-2 mt-6 text-sm font-mono text-slate">
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px] "> <img src="https://skillicons.dev/icons?i=js" width={18} height={18} alt="Js" className="mr-2" /> JS (ES6+)</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=ts" width={18} height={18} alt="Js" className="mr-2" /> TypeScript</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=react" width={18} height={18} alt="Js" className="mr-2" /> React</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=nodejs" width={18} height={18} alt="Js" className="mr-2" /> Node.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=vue" width={18} height={18} alt="Js" className="mr-2" /> Vue.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=git" width={18} height={18} alt="Js" className="mr-2" /> Git</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=nextjs" width={18} height={18} alt="Js" className="mr-2" /> Next.js</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=tailwind" width={18} height={18} alt="Js" className="mr-2" /> TailwindCSS</li>
-                    <li className="before:content-['▹'] before:text-green before:mr-2 flex items-center max-[600px]:text-[10px]"> <img src="https://skillicons.dev/icons?i=firebase" width={18} height={18} alt="Js" className="mr-2" /> firebase</li>
+                <ul className="grid grid-cols-3 gap-x-6 gap-y-3 mt-6 text-sm font-mono text-slate-300
+               max-[900px]:grid-cols-2
+               max-[400px]:grid-cols-1">
+
+                    {[
+                        { name: "JS (ES6+)", icon: "js" },
+                        { name: "TypeScript", icon: "ts" },
+                        { name: "React", icon: "react" },
+                        { name: "Node.js", icon: "nodejs" },
+                        { name: "Vue.js", icon: "vue" },
+                        { name: "Git", icon: "git" },
+                        { name: "Next.js", icon: "nextjs" },
+                        { name: "TailwindCSS", icon: "tailwind" },
+                        { name: "Firebase", icon: "firebase" },
+                    ].map((tech) => (
+                        <li
+                            key={tech.name}
+                            className="flex items-center gap-2 before:content-['▹'] before:text-green-400"
+                        >
+                            <img
+                                src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                                width={18}
+                                height={18}
+                                alt={tech.name}
+                            />
+                            <span className="whitespace-nowrap text-xs sm:text-sm">
+                                {tech.name}
+                            </span>
+                        </li>
+                    ))}
                 </ul>
+
             </div>
 
             {/* Right Side Image */}
-            <div className="relative max-w-xs mx-auto">
+            <div className="relative !z-30 max-w-xs mx-auto">
                 <div className="relative group h-[280px] w-[300px] max-[600px]:h-[240px] max-[600px]:w-[260px]  ">
                     {/* Image */}
                     <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90

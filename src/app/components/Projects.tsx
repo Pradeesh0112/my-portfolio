@@ -44,7 +44,7 @@ export const Projects = () => {
               }`}
           >
             {/* Image */}
-            <div className="md:w-3/5 w-full border-[1px] shadow-lg rounded-lg overflow-hidden relative group">
+            <div className="md:!w-3/5 !h-[240px] !w-full border-[1px] shadow-lg rounded-lg overflow-hidden relative group">
             <Image src="/assets/generated-image.png" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="me"  width={400} height={400} />
             </div>
 

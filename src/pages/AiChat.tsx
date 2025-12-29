@@ -53,7 +53,7 @@ export default function AiChatWidget() {
       {/* Floating Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-14 z-50  border border-slate hover:border-green text-green
+        className="fixed bottom-6 right-14 !z-[100]  border border-slate hover:border-green text-green
                    w-12 h-12 rounded-full shadow-lg flex items-center justify-center
                    font-mono hover:text-slate transition"
       >
@@ -116,7 +116,7 @@ export default function AiChatWidget() {
           {/* Input */}
           <form
             onSubmit={sendMessage}
-            className="flex items-center gap-2 p-3 border-t border-green/30"
+            className="flex items-center gap-2 p-3 border-t border-green/30 !z-[100]"
           >
             <input
               value={input}
