@@ -17,16 +17,16 @@ export const Navbar = () => {
       <div className="hidden md:flex justify-end items-center">
         <ul className="flex space-x-8 text-sm font-mono text-lightSlate mx-6">
           <li className="hover:text-green transition cursor-pointer">
-          <a href="#about" ><span className="text-green">01.</span> About</a> 
+          <a href="#about" className="scroll-mt-20"><span className="text-green">01.</span> About</a> 
           </li>
           <li className="hover:text-green transition cursor-pointer">
-          <a href="#experience" ><span className="text-green">02.</span> Experience</a> 
+          <a href="#experience" className="scroll-mt-20" ><span className="text-green">02.</span> Experience</a> 
           </li>
           <li className="hover:text-green transition cursor-pointer">
-            <a href="#work" ><span className="text-green">03.</span> Work</a> 
+            <a href="#work" className="scroll-mt-20"><span className="text-green">03.</span> Work</a> 
           </li>
           <li className="hover:text-green transition cursor-pointer">
-          <a href="#contact" ><span className="text-green">04.</span> Contact</a> 
+          <a href="#contact" className="scroll-mt-20"><span className="text-green">04.</span> Contact</a> 
           </li>
         </ul>
 
@@ -64,22 +64,24 @@ export const Navbar = () => {
         <div className="flex flex-col items-center justify-center h-[80%] space-y-6 text-lightSlate font-mono">
           <ul className="space-y-6 text-lg">
             <li className="hover:text-green transition cursor-pointer" onClick={toggleMenu}>
-                <a
-        href="#projects" ><span className="text-green">01.</span> About</a> 
+                <a href="#about" ><span className="text-green">01.</span> About</a> 
             </li>
             <li className="hover:text-green transition cursor-pointer" onClick={toggleMenu}>
-              <span className="text-green">02.</span> Experience
+              <a href="#experience"><span className="text-green">02.</span> Experience</a>
             </li>
             <li className="hover:text-green transition cursor-pointer" onClick={toggleMenu}>
-              <span className="text-green">03.</span> Work
+              <a href="#work"><span className="text-green">03.</span> Work</a>
             </li>
             <li className="hover:text-green transition cursor-pointer" onClick={toggleMenu}>
-              <span className="text-green">04.</span> Contact
+              <a href="#featured"><span className="text-green">03.</span> Projects</a>
+            </li>
+            <li className="hover:text-green transition cursor-pointer" onClick={toggleMenu}>
+              <a href="#contact"><span className="text-green">04.</span> Contact</a>
             </li>
           </ul>
 
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1MCZeLgRb_HW4AP4pTbZgLBo4IWVHYjWr/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-mono leading-none text-green border border-green rounded-md py-2 px-6 transition-all duration-300 ease-[cubic-bezier(0.645,0.045,0.355,1)] hover:-translate-y-1 hover:translate-x-[-4px] hover:shadow-[3px_3px_0_0_#64ffda]"

@@ -1,10 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 export const AboutMe = () => {
+    const VISIBLE_COUNT = 6;
+    const [showAll, setShowAll] = useState(false);
+    const techList: any = [
+        { name: "JS (ES6+)", icon: "js" },
+        { name: "TypeScript", icon: "ts" },
+        { name: "React", icon: "react" },
+        { name: "Node.js", icon: "nodejs" },
+        { name: "Vue.js", icon: "vue" },
+        { name: "Git", icon: "git" },
+        { name: "Next.js", icon: "nextjs" },
+        { name: "TailwindCSS", icon: "tailwind" },
+        { name: "Firebase", icon: "firebase" },
+       
+    ];
+    const visibleTech = showAll
+        ? techList
+        : techList.slice(0, VISIBLE_COUNT);
     return (
         <section
             id="about"
-            className="max-w-5xl mx-auto px-6 grid md:grid-cols-[3fr_2fr] gap-12 items-center  "
+            className="max-w-5xl mx-auto px-6 grid md:grid-cols-[3fr_2fr] gap-12 items-start  "
         >
             {/* Left Content */}
             <div>
@@ -32,38 +51,67 @@ export const AboutMe = () => {
                     </p>
                 </div>
 
-                {/* Tech List */}
-                <ul className="grid grid-cols-3 gap-x-6 gap-y-3 mt-6 text-sm font-mono text-slate-300
-               max-[900px]:grid-cols-2
-               max-[400px]:grid-cols-1">
+                {/* <ul
+        className="grid grid-cols-3 gap-x-6 gap-y-3 mt-6 text-sm font-mono text-slate-300
+        max-[900px]:grid-cols-2
+        max-[400px]:grid-cols-1"
+      >
+        {visibleTech.map((tech:any) => (
+          <li
+            key={tech.name}
+            className="flex items-center gap-2 before:content-['▹'] before:text-green-400"
+          >
+            <img
+              src={`https://skillicons.dev/icons?i=${tech.icon}`}
+              width={18}
+              height={18}
+              alt={tech.name}
+            />
+            <span className="whitespace-nowrap text-xs sm:text-sm">
+              {tech.name}
+            </span>
+          </li>
+        ))}
+      </ul> */}
 
-                    {[
-                        { name: "JS (ES6+)", icon: "js" },
-                        { name: "TypeScript", icon: "ts" },
-                        { name: "React", icon: "react" },
-                        { name: "Node.js", icon: "nodejs" },
-                        { name: "Vue.js", icon: "vue" },
-                        { name: "Git", icon: "git" },
-                        { name: "Next.js", icon: "nextjs" },
-                        { name: "TailwindCSS", icon: "tailwind" },
-                        { name: "Firebase", icon: "firebase" },
-                    ].map((tech) => (
-                        <li
-                            key={tech.name}
-                            className="flex items-center gap-2 before:content-['▹'] before:text-green-400"
-                        >
-                            <img
-                                src={`https://skillicons.dev/icons?i=${tech.icon}`}
-                                width={18}
-                                height={18}
-                                alt={tech.name}
-                            />
-                            <span className="whitespace-nowrap text-xs sm:text-sm">
-                                {tech.name}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
+                <div
+                    className={`overflow-hidden transition-[max-height] duration-500 ease-in-out
+  ${showAll ? "max-h-[500px]" : "max-h-[120px]"}`}
+                >
+                    <ul
+                        className="grid grid-cols-3 gap-x-6 gap-y-3 mt-6 text-sm font-mono text-slate-300
+    max-[900px]:grid-cols-2
+    max-[400px]:grid-cols-1"
+                    >
+                        {visibleTech.map((tech: any) => (
+                            <li
+                                key={tech.name}
+                                className="flex items-center gap-2 before:content-['▹'] before:text-green-400"
+                            >
+                                <img
+                                    src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                                    width={18}
+                                    height={18}
+                                    alt={tech.name}
+                                />
+                                <span className="whitespace-nowrap text-xs sm:text-sm">
+                                    {tech.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+
+                {/* Show More / Less Button */}
+                {techList.length > VISIBLE_COUNT && (
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="mt-4 text-green-400 text-[10px] font-mono hover:underline"
+                    >
+                        {showAll ? "Show Less..." : "Show More..."}
+                    </button>
+                )}
 
             </div>
 
@@ -71,10 +119,11 @@ export const AboutMe = () => {
             <div className="relative !z-30 max-w-xs mx-auto">
                 <div className="relative group h-[280px] w-[300px] max-[600px]:h-[240px] max-[600px]:w-[260px]  ">
                     {/* Image */}
-                    <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter grayscale contrast-100 brightness-90
+                    {/* grayscale */}
+                    <Image src="/assets/me.jpeg" alt="me" className="relative z-20 rounded-md filter contrast-100 brightness-90
                  transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1)]
                  group-hover:-translate-y-3 group-hover:-translate-x-3
-                 group-hover:grayscale-0 h-[100%] cursor-pointer w-[100%] object-cover " width={400} height={400} />
+                 group-hover:grayscale-0 h-[100%] cursor-pointer w-[100%] object-cover " width={400} height={500} />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-green/20 rounded-md mix-blend-multiply 
