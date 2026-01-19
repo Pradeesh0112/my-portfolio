@@ -31,7 +31,7 @@ export const Navbar = () => {
         </ul>
 
         <a
-          href="https://drive.google.com/file/d/1MCZeLgRb_HW4AP4pTbZgLBo4IWVHYjWr/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/15ROpUjTk3t8M2guTqvPNdfQeB5tk5e1b/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-4 text-xs font-mono leading-none text-green border border-green rounded-md py-2.5 px-4 transition-all duration-300 ease-[cubic-bezier(0.645,0.045,0.355,1)] hover:-translate-y-1 hover:translate-x-[-4px] hover:shadow-[3px_3px_0_0_#64ffda]"
@@ -81,7 +81,7 @@ export const Navbar = () => {
           </ul>
 
           <a
-            href="https://drive.google.com/file/d/1MCZeLgRb_HW4AP4pTbZgLBo4IWVHYjWr/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/15ROpUjTk3t8M2guTqvPNdfQeB5tk5e1b/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-mono leading-none text-green border border-green rounded-md py-2 px-6 transition-all duration-300 ease-[cubic-bezier(0.645,0.045,0.355,1)] hover:-translate-y-1 hover:translate-x-[-4px] hover:shadow-[3px_3px_0_0_#64ffda]"
