@@ -3,6 +3,9 @@
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import TextIcons from "./commonUi/TextIcons";
+import { Tilt } from "./commonUi/Tilt";
+import { SpotlightCard } from "./commonUi/SpotlightCard";
+import { Magnetic } from "./commonUi/Magnetic";
 
 const projects = [
   {
@@ -12,12 +15,12 @@ const projects = [
       Implemented solutions that reduced package weight and improved application performance
 - Technologies: Next.js, Webpack, Git`,
     tags: [
-              {title:"Nest.js",url:"https://skillicons.dev/icons?i=nestjs"},
-              {title:"Firebase",url:"https://skillicons.dev/icons?i=firebase"},
-          {title:"Next.js",url:"https://skillicons.dev/icons?i=nextjs"},
-        {title:"CSS",url:"https://skillicons.dev/icons?i=css"},
-        {title:"TailwindCSS",url:"https://skillicons.dev/icons?i=tailwind"},
-        {title:"JS",url:"https://skillicons.dev/icons?i=js"},
+      { title: "Nest.js", url: "https://skillicons.dev/icons?i=nestjs" },
+      { title: "Firebase", url: "https://skillicons.dev/icons?i=firebase" },
+      { title: "Next.js", url: "https://skillicons.dev/icons?i=nextjs" },
+      { title: "CSS", url: "https://skillicons.dev/icons?i=css" },
+      { title: "TailwindCSS", url: "https://skillicons.dev/icons?i=tailwind" },
+      { title: "JS", url: "https://skillicons.dev/icons?i=js" },
     ],
     image: "/assets/generated-image.png", // replace with your image path
     links: {
@@ -43,10 +46,25 @@ export const Projects = () => {
             className={`relative flex flex-col md:flex-row items-center gap-6  ${idx % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
           >
-            {/* Image */}
-            <div className="md:!w-3/5 !h-[240px] !w-full border-[1px] shadow-lg rounded-lg overflow-hidden relative group">
-            <Image src="/assets/generated-image.png" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="me"  width={400} height={400} />
+            {/* Image Card with Tilt and Spotlight */}
+            <div className="md:w-3/5 w-full">
+              <Tilt rotationFactor={10}>
+                <SpotlightCard className="p-0 border-white/5 overflow-hidden shadow-2xl">
+                  <div className="relative h-[240px] w-full group overflow-hidden">
+                    <Image
+                      src={project.image}
+                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:rotate-1"
+                      alt={project.title}
+                      width={800}
+                      height={450}
+                    />
+                    {/* Modern Overlay */}
+                    <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors duration-500" />
+                  </div>
+                </SpotlightCard>
+              </Tilt>
             </div>
+
 
             {/* Text */}
             <div className="md:w-2/5 w-full text-left md:text-right">
@@ -61,28 +79,36 @@ export const Projects = () => {
               </div>
               {/* Tags */}
               <ul className="flex flex-wrap gap-3 text-slate text-xs font-mono mb-4">
-                {project.tags.map((tag:any, i) => (
+                {project.tags.map((tag: any, i) => (
                   <li key={i}>
                     <TextIcons url={tag?.url} title={tag?.title} />
                   </li>
                 ))}
               </ul>
               {/* Links */}
-              <div className="flex gap-4 justify-start md:justify-end">
-                {/* <a
-                  href={project.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="w-5 h-5 text-slate hover:text-green transition" />
-                </a> */}
-                <a
-                  href={project.links.external}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="w-5 h-5 text-slate hover:text-green transition" />
-                </a>
+              <div className="flex gap-6 justify-start md:justify-end items-center mt-2">
+                {project.links.github && (
+                  <Magnetic strength={0.2}>
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate hover:text-green transition-colors p-2"
+                    >
+                      <Github size={20} />
+                    </a>
+                  </Magnetic>
+                )}
+                <Magnetic strength={0.2}>
+                  <a
+                    href={project.links.external}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate hover:text-green transition-colors p-2"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+                </Magnetic>
               </div>
             </div>
           </div>
